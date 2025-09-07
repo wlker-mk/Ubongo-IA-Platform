@@ -1,10 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI Consulting{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/consulting.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/learning.css' %}">
+    <script src="{% static 'js/index.js' %}"></script>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">AI Consulting</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a class="propos" href="#">A-propos</a></li>
+            </ul>
+        </nav>
+            <a href="#" class="consultation-btn light">Se connecter</a>
+            <a href="#" class="consultation-btn light">Déconnexion</a>
+    </header>
 
+    <!-- Main content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="brand-logos">
+                    <span class="ai-logo">AI CONSULTING<sup>®</sup></span>
+                    <span class="tech-partner">TECH PARTNER</span>
+                </div>
+            </div>
+
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="#">AI Diagnosis</a></li>
+                        <li><a href="#">Expert Matching</a></li>
+                        <li><a href="#">Implementation</a></li>
+                        <li><a href="#">Consulting Plans</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+                <!--
+                <div class="footer-column">
+                    <h4>INDUSTRIES</h4>
+                    <ul>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Retail</a></li>
+                        <li><a href="#">Manufacturing</a></li>
+                        <li><a href="#">Energy</a></li>
+                        <li><a href="#">Transportation</a></li>
+                    </ul>
+                </div>
+                -->
+
+                <div class="footer-column">
+                    <h4>RESOURCES</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2023-2025 AI Consulting, a Tech Partner company. All Rights Reserved.<br>
+                AI Consulting<sup>®</sup> and AI Implementation<sup>®</sup> are registered trademarks.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

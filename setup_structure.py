@@ -3,7 +3,7 @@ import os
 # === Définition des apps principales et modulaires ===
 apps = {
     "users": {},
-    "auth": {},
+    "accounts": {},
     "consultations": {},
     "bookings": {},
     "payments": {"gateways": ["stripe_service.py", "paypal_service.py", "mobilemoney_service.py", "crypto_service.py"]},
