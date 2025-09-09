@@ -35,7 +35,6 @@ urlpatterns = [
     path("analytics/", include("apps.analytics.urls")),
     path("security/", include("apps.security.urls")),
     path("etl/", include("apps.etl.urls")),
-    path("elearning/", include("apps.elearning.urls")),
     path("ai/", include("apps.ai.urls")),
     path("api/", include("apps.api.urls")),
     path("core/", include("apps.core.urls")),

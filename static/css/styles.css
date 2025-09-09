@@ -1,0 +1,634 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px; /* padding réduit */
+  color: #fff;
+  position: relative;
+
+  /* Image de fond */
+  background: url("image/un-paysage-naturel-magnifique.jpg") no-repeat center center;
+  background-size: cover;
+
+  height: 80px; /* hauteur minimale */
+}
+
+/* overlay pour lisibilité */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+header .logo img {
+  width: 50px;       /* largeur du logo */
+  height: 50px;      /* hauteur égale pour un cercle parfait */
+  border-radius: 50%; /* rend l'image ronde */
+  display: block;    /* supprime les espaces indésirables */
+}
+header .logo {
+  display: flex;
+  align-items: center;  /* aligne verticalement le texte et le logo */
+  gap: 10px;            /* espace entre le logo et le texte */
+}
+
+header .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;   /* logo rond */
+}
+
+header .logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;          /* ou autre couleur adaptée à ton header */
+}
+
+
+/* contenu au-dessus de l’overlay */
+header > * {
+  position: relative;
+  z-index: 2;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+header .auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .auth input {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+}
+/* Bouton Connexion / Inscription stylé */
+header .btn-login {
+  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* Rouge, jaune, vert */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Liens du menu - style par défaut */
+header nav a {
+  text-decoration: none;   /* pas de soulignement par défaut */
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;      /* pour pseudo-element si besoin */
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hover : couleur et taille légèrement plus grande */
+header nav a:hover {
+  color: rgb(243, 220, 17);
+  font-size: 15px;
+}
+
+/* Page actuelle : soulignement avec couleur spécifique */
+header nav a.active {
+  text-decoration: underline;  /* seul le lien actif est souligné */
+  color: rgb(136, 150, 9);
+}
+
+/* Pseudo-element pour animation (optionnel si tu veux un effet trait animé) */
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;                /* pas de trait par défaut */
+  background-color: rgb(243, 220, 17);
+  transition: height 0.3s ease;
+}
+
+/* Effet hover sur pseudo-element (optionnel) */
+header nav a:hover::after {
+  height: 2px; /* petit trait fin au hover */
+}
+
+/* Trait pour la page active */
+header nav a.active::after {
+  height: 3px;
+  background-color: rgb(136, 150, 9);
+}
+
+
+
+/* HERO */
+.hero {
+  background: url("image/diagnostic-bg.jpg") center/cover no-repeat;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background: #8B1E1E;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60);
+}
+
+
+
+
+
+
+/* SECTORS */
+.sectors {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.sectors h2 {
+  margin-bottom: 20px;
+}
+
+.sectors .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.sectors .card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+
+
+/* COURSES */
+.courses {
+  padding: 60px 5%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.courses h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Grille des cartes */
+.courses .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Carte individuelle */
+.course {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.course img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Texte */
+.course h3 {
+  margin: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.course p {
+  margin: 0 15px 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Lien cours */
+.course a {
+  display: inline-block;
+  margin: 10px 15px 15px;
+  padding: 8px 14px;
+  background: #fff; /* fond blanc */
+  border: 2px solid #1a73e8;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.course a:hover {
+  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* africain */
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Bouton catalogue */
+.courses .btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #fff; /* fond blanc */
+  color: #1a73e8;
+  border: 2px solid #1a73e8;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.courses .btn-primary:hover {
+  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* africain */
+  color: #fff;
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 40px 5%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonials .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.testimonials blockquote {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+
+
+
+/* NEWS */
+.news {
+  padding: 40px 5%;
+}
+
+.news h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.news-item {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.news-item h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.news .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.news-item {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-item img {
+  width: 100%;
+  height: 150px;         /* ajuste selon ton image */
+  object-fit: cover;     /* recadrage pour que l’image remplisse le bloc */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.news-item h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.news-item p {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+/* Section Experts */
+.experts {
+  padding: 60px 5%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.experts h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Grille de cartes */
+.experts .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Carte Expert */
+.expert {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expert:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Image Expert */
+.expert img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* rond */
+  margin-bottom: 15px;
+  border: 3px solid #0066cc;
+}
+
+/* Nom */
+.expert h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Spécialité */
+.expert p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* Bouton Voir Profil */
+.expert a {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #fff; /* fond blanc */
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.expert a:hover {
+  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* Rouge, Jaune, Vert */
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Bouton Tous nos experts */
+.experts .btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #fff; /* fond blanc */
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.experts .btn-primary:hover {
+  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* dégradé africain */
+  color: #fff;
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(to right, #8e3a2f, #1c1c1c);
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* ajout d’une colonne contact */
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Icônes réseaux sociaux (colonne Suivez-nous) */
+.social-icons a {
+  color: #fff;
+  margin-right: 12px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+}
+
+/* Liens */
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #f39c12;
+}
+
+/* Ligne séparatrice */
+.footer::after {
+  content: "";
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+/* Bas du footer */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+.footer-bottom span {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Icônes de contact (WhatsApp, TikTok, etc.) */
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap; /* passe à la ligne si trop d’icônes */
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.contact-icons a {
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #27ae60, #f39c12, #e74c3c); /* Rouge, jaune, vert */
+  width: 38px;
+  height: 38px;
+  border-radius: 50%; /* cercle parfait */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-icons a:hover {
+  background: linear-gradient(135deg, #8e44ad, #3498db, #2ecc71); /* autre palette africaine */
+  transform: scale(1.2);
+}

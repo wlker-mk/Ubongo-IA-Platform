@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}AI Consulting{% endblock %}</title>
+    <title>{% block title %}Ubungo{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/consulting.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/learning.css' %}">
     <script src="{% static 'js/index.js' %}"></script>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- HEADER -->
     <header>
-        <div class="logo">AI Consulting</div>
+        <div class="logo">
+            <img src="image/image2.jpeg" alt="Logo IAcademy">
+            <span>| Ubongo</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a class="propos" href="#">A-propos</a></li>
+                <li><a href="#" class="active">Homepage</a></li>
+                <li><a href="categoriesCours.html">Catalogue de Cours</a></li>
+                <li><a href="diagnostic.html">consulting </a></li>
+                <li><a href="expert.html">Experts IA</a></li>
+                <li><a href="espaceCommunautaire.html">Communauté</a></li>
             </ul>
         </nav>
-            <a href="#" class="consultation-btn light">Se connecter</a>
-            <a href="#" class="consultation-btn light">Déconnexion</a>
+        <div class="auth">
+            <input type="text" placeholder="Rechercher cours, experts…">
+            <a href="login.html" class="btn-login">Connexion / Inscription</a>
+        </div>
     </header>
 
     <!-- Main content -->
@@ -31,69 +36,71 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer Section -->
-    <footer class="site-footer">
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-brand">
-                <div class="brand-logos">
-                    <span class="ai-logo">AI CONSULTING<sup>®</sup></span>
-                    <span class="tech-partner">TECH PARTNER</span>
+            <!-- Colonne 1 : À propos -->
+            <div class="footer-about">
+                <p>Votre passerelle vers l'éducation de qualité<br> propulsée par l'IA.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
-            <div class="footer-columns">
-                <div class="footer-column">
-                    <h4>SERVICES</h4>
-                    <ul>
-                        <li><a href="#">AI Diagnosis</a></li>
-                        <li><a href="#">Expert Matching</a></li>
-                        <li><a href="#">Implementation</a></li>
-                        <li><a href="#">Consulting Plans</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
+            <!-- Colonne 2 : Liens rapides -->
+            <div class="footer-links">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="acuiel.html">Accueil</a></li>
+                    <li><a href="categoriesCours.html">Cours</a></li>
+                    <li><a href="tarification.html">Tarification</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
 
-                <!--
-                <div class="footer-column">
-                    <h4>INDUSTRIES</h4>
-                    <ul>
-                        <li><a href="#">Healthcare</a></li>
-                        <li><a href="#">Finance</a></li>
-                        <li><a href="#">Retail</a></li>
-                        <li><a href="#">Manufacturing</a></li>
-                        <li><a href="#">Energy</a></li>
-                        <li><a href="#">Transportation</a></li>
-                    </ul>
-                </div>
-                -->
+            <!-- Colonne 3 : Ressources -->
+            <div class="footer-links">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
 
-                <div class="footer-column">
-                    <h4>RESOURCES</h4>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Webinars</a></li>
-                        <li><a href="#">API</a></li>
-                    </ul>
+            <!-- Colonne 4 : Entreprise + RGPD -->
+            <div class="footer-links">
+                <h4>Entreprise</h4>
+                <ul>
+                    <li><a href="#">À Propos</a></li>
+                    <li><a href="#">Carrières</a></li>
+                    <li><a href="#">Partenaires</a></li>
+                    <li><a href="rgpd.html">RGPD</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 5: Contact -->
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <div class="contact-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <div class="copyright">
-                © 2023-2025 AI Consulting, a Tech Partner company. All Rights Reserved.<br>
-                AI Consulting<sup>®</sup> and AI Implementation<sup>®</sup> are registered trademarks.
-            </div>
-
-            <div class="footer-links">
-                <a href="#">Accessibility</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Cookie Policy</a>
-                <a href="#">Contact</a>
-            </div>
+            <p>Made with <i class="fa-solid fa-heart" style="color:#8e44ad;"></i> by <span>VotreSite</span></p>
         </div>
     </footer>
+
 </body>
 </html>
