@@ -89,16 +89,6 @@ TEMPLATES = [
 ]
 
 
-# Static files (CSS, JavaScript, images)
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]  # répertoire statique global
-STATIC_ROOT = BASE_DIR / "staticfiles"    # pour collectstatic (déploiement)
-
-# Media files (uploads utilisateurs)
-MEDIA_URL = "/images/"
-MEDIA_ROOT = BASE_DIR / "images"
-
-
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
@@ -147,7 +137,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# Static files (CSS, JavaScript, images)
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "static"]  # répertoire statique global
+STATIC_ROOT = BASE_DIR / "staticfiles"    # pour collectstatic (déploiement)
+
+# Media files (uploads utilisateurs)
+MEDIA_URL = "/images/"
+MEDIA_ROOT = BASE_DIR / "images"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
