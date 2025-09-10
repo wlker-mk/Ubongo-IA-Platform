@@ -1,57 +1,56 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Ubongo IAcademy</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <!-- formulaire -->
-    <div class="container">
-        <div class="left-panel">
-            <div class="branding">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Consulting_icon.svg/2048px-Consulting_icon.svg.png" alt="Logo" class="logo">
-                <h2>IA CONSULTING</h2>
-                <h1>Bonjour👋</h1><br><br>
-                <p>Bienvenue sur IA CONSULTING. La plateforme où les entreprises et les consultants réussissent. Ensemble.</p>
+
+    <section class="login">
+        <div class="login-container">
+            <h2>Connexion</h2>
+
+            <!-- Sélection du type de compte -->
+            <div class="user-types">
+                <button data-type="expert">Expert</button>
+                <button data-type="entreprise">Entreprise</button>
             </div>
-        </div>
 
-        <div class="right-panel">
-            <form class="login-form" method="POST" action="login.html">
-                {% csrf_token %}
-                <h2>Bon retour</h2>
+            <!-- Formulaire -->
+            <form action="#" method="post">
+                <input type="hidden" name="user_type" id="user_type" value="apprenant">
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="username" placeholder="Entrez votre adresse e-mail" required />
+                <label>Email :</label>
+                <input type="email" name="email" placeholder="Entrez votre email" required>
 
-                <label for="password">Passe</label>
-                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required />
+                <label>Mot de passe :</label>
+                <input type="password" name="password" placeholder="Votre mot de passe" required>
 
-                <a href="#" class="forgot">J'ai oublié mon mot de passe</a>
-
-                <button type="submit">Se connecter</button>
-
-                <div class="info-box">
-                    ✨ Fatigué de vous souvenir du mot de passe ?
-                    <br><a href="#">Connexion avec un lien magique</a> pour une connexion sans mot de passe.
-                </div>
-
-                <div class="divider">autre</div>
-
-                <button type="button" class="google-btn">
-                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" />
-                    Connectez-vous avec Google
-                </button>
-
-                <p class="signup">
-                    Pas encore inscrit ?
-                    <a href="{% url 'register' %}">Inscrivez-vous en tant que professeur</a> ou
-                    <a href="{% url 'register' %}">entreprise</a>
-                </p>
+                <button type="submit" class="btn-primary">Se connecter</button>
             </form>
+
+                <p class="register-link">
+                    Pas encore de compte ? <a href="{% url 'register' %}">Inscrivez-vous</a>
+                </p>
         </div>
-    </div>
+    </section>
+
+    <script>
+        // JS pour activer le bon bouton
+        const buttons = document.querySelectorAll(".user-types button");
+        const hiddenInput = document.getElementById("user_type");
+
+        buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            hiddenInput.value = btn.dataset.type;
+        });
+        });
+    </script>
+
 </body>
 </html>

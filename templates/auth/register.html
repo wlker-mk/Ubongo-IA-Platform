@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Consulting IA</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
 </head>
 <body>
 
+    <div class="signup-container">
+        <h1>Créer un compte</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showForm('entreprise')">Entreprise</button>
+            <button class="tab-btn" onclick="showForm('expert')">Expert</button>
+        </div>
+
+        <!-- Formulaire Entreprise -->
+        <form id="form-entreprise" class="form active">
+            <input type="text" placeholder="Nom de l'entreprise" required>
+            <input type="text" placeholder="Secteur d'activité" required>
+            <input type="number" placeholder="Taille de l'entreprise (nombres d'employés)" required>
+            <input type="email" placeholder="Email professionnel" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire en tant qu'Entreprise</button>
+        </form>
+
+        <!-- Formulaire Expert -->
+        <form id="form-expert" class="form">
+            <input type="text" placeholder="Nom complet" required>
+            <input type="text" placeholder="Spécialité (ex: NLP, Data Science)" required>
+            <input type="number" placeholder="Années d'expérience" required>
+            <input type="email" placeholder="Email professionnel" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire en tant qu'Expert</button>
+        </form>
+    </div>
+
+    <script>
+        function showForm(type) {
+        document.querySelectorAll(".form").forEach(f => f.classList.remove("active"));
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+
+        document.getElementById("form-" + type).classList.add("active");
+        event.target.classList.add("active");
+        }
+    </script>
 </body>
 </html>

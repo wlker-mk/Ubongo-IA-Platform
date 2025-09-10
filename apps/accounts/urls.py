@@ -1,7 +1,10 @@
-from django.urls import path
+from django.urls import path, include
+from django.shortcuts import redirect
 from . import views
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", lambda request: redirect("login")),  # redirige /accounts/ vers /accounts/login/
+    path("login/", views.login, name="login"),
+    path("register/", views.register, name="register"),
 ]
 

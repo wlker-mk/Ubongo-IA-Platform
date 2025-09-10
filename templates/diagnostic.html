@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/diagnostic.css' %}">
+{% endblock %}
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Débloquez le Potentiel de l'IA dans<br>Votre Entreprise</h1>
+            <p>Notre plateforme d'apprentissage vous offre une analyse approfondie de l'état de votre IA actuel, et l'utilisation efficace de l'IA de votre équipe stratégiques pour une transformation numérique réussie.</p>
+            <a href="#diagnostic" class="btn-primary">Commencer le Diagnostic</a>
+        </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Comment ça marche ?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">⚙</div>
+                    <h3>Evaluez Vos Besoins</h3>
+                    <p>Répondez à des questions clés sur votre entreprise, vos défis et vos objectifs en matière d'IA. Notre outil analyse vos réponses.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🎯</div>
+                    <h3>Obtenez une Analyse</h3>
+                    <p>Notre moteur d'IA génère un rapport détaillé identifiant les opportunités d'intégrer efficacement l'IA dans vos domaines d'activité.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">💡</div>
+                    <h3>Recommandations Personnelles</h3>
+                    <p>Recevez des stratégies sur mesure incluant les meilleures outils et des conseils d'experts pour maximiser votre potentiel IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi utiliser -->
+    <section class="why-use">
+        <div class="container">
+            <h2>Pourquoi utiliser notre Diagnostic IA ?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h3>Optimisation de la Croissance</h3>
+                        <p>Découvrez des opportunités inexploitées pour stimuler l'innovation et la croissance de votre entreprise grâce à l'IA.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⚖</div>
+                    <div class="benefit-content">
+                        <h3>Prise de Décision Eclairée</h3>
+                        <p>Accédez à des informations basées sur des données pour prendre des décisions stratégiques en toute confiance concernant l'IA.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🛡</div>
+                    <div class="benefit-content">
+                        <h3>Atténuation des Risques</h3>
+                        <p>Identifiez et résolvez les obstacles potentiels à l'adoption de l'IA avant qu'ils ne surviennent, assurant une transition en douceur.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-content">
+                        <h3>Développement d'Équipe</h3>
+                        <p>Obtenez des recommandations de formation personnalisées pour développer les compétences IA de votre équipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnostic Form -->
+    <section class="diagnostic-form" id="diagnostic">
+        <div class="container">
+            <h2>Simulez Votre Diagnostic IA</h2>
+
+            <div class="form-container">
+                <h3>Évaluez Votre Potentiel IA</h3>
+                <p class="form-subtitle">Répondez à quelques questions pour obtenir un aperçu personnalisé</p>
+
+                <form action="login.html" method="get">
+                    <div class="question">
+                        <h3>1. Quelle est la taille de votre entreprise ?</h3>
+                        <input type="text" name="taille" placeholder="Sélectionnez la taille de l'entreprise">
+                    </div>
+
+                    <div class="question">
+                        <h3>2. Quel est votre niveau de familiarité avec l'IA ?</h3>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="novice" name="familiarite" value="novice">
+                                <label for="novice">Novice</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="niveau-base" name="familiarite" value="niveau-base">
+                                <label for="niveau-base">Niveau de base</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="intermediaire" name="familiarite" value="intermediaire">
+                                <label for="intermediaire">Intermédiaire</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="expert" name="familiarite" value="expert">
+                                <label for="expert">Expert</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h3>3. Quel est votre principal objectif en intégrant l'IA ?</h3>
+                        <input type="text" name="objectif" placeholder="Ex: Automatisation des tâches répétitives, Amélioration du service client">
+                    </div>
+
+                    <div class="question">
+                        <h3>4. Quels défis rencontrez-vous dans l'adoption de l'IA ?</h3>
+                        <input type="text" name="defis" placeholder="Ex: Manque d'expertise interne, Coûts élevés, Problèmes de données">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Obtenir les Résultats</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

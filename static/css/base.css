@@ -8,7 +8,7 @@ header {
   position: relative;
 
   /* Image de fond */
-  background: url("image/un-paysage-naturel-magnifique.jpg") no-repeat center center;
+ background: url("../images/un-paysage-naturel-magnifique.jpg") no-repeat center center;
   background-size: cover;
 
   height: 80px; /* hauteur minimale */
@@ -54,7 +54,7 @@ header > * {
 }
 
 header .logo {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -68,7 +68,7 @@ header nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 header .auth {
@@ -81,7 +81,7 @@ header .auth input {
   padding: 4px 8px;
   border-radius: 4px;
   border: none;
-  font-size: 20px;
+  font-size: 10px;
 }
 /* Bouton Connexion / Inscription stylé */
 header .btn-login {
@@ -91,7 +91,7 @@ header .btn-login {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
@@ -101,7 +101,7 @@ header nav a {
   text-decoration: none;   /* pas de soulignement par défaut */
   color: #fff;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 19px;
   position: relative;      /* pour pseudo-element si besoin */
   padding-bottom: 2px;
   transition: all 0.3s ease;
@@ -110,7 +110,7 @@ header nav a {
 /* Hover : couleur et taille légèrement plus grande */
 header nav a:hover {
   color: rgb(243, 220, 17);
-  font-size: 15px;
+  font-size: 10px;
 }
 
 /* Page actuelle : soulignement avec couleur spécifique */

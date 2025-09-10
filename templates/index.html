@@ -37,59 +37,58 @@
         <h2>Actualités IA</h2>
         <div class="cards">
             <div class="news-item">
-                <img src="image/image1.png" alt="IA Générative">
+                <img src="{% static 'images/image1.jpg' %}" alt="IA Générative">
                 <h3>L’IA Générative Révolutionne la Création de Contenu</h3>
                 <p>Lire plus</p>
             </div>
             <div class="news-item">
-                <img src="image/heureuse-femme-d-affaires-avec-bulle-de-dialogue.jpg" alt="IA Éthique">
+                <img src="{% static 'images/heureuse-femme-d-affaires-avec-bulle-de-dialogue.jpg' %}" alt="IA Éthique">
                 <h3>Les Dernières Avancées en IA Éthique</h3>
                 <p>Lire plus</p>
             </div>
             <div class="news-item">
-                <img src="image/equipe-commerciale-multiethnique-discutant-du-projet.jpg" alt="IA et emploi">
+                <img src="{% static 'images/equipe-commerciale-multiethnique-discutant-du-projet.jpg' %}" alt="IA et emploi">
                 <h3>Impact de l’IA sur l’Emploi</h3>
                 <p>Lire plus</p>
             </div>
         </div>
     </section>
 
- <!-- EXPERTS -->
+<!-- EXPERTS -->
     <section class="experts">
         <h2>Rencontrez nos experts</h2>
         <div class="cards">
 
             <div class="expert">
-                <img src="image/portrait3.jpg" alt="Photo de Dr. Émilie Duval">
+                <img src="{% static 'images/portrait3.jpg' %}" alt="Photo de Dr. Émilie Duval">
                 <h3>Dr. Émilie Duval</h3>
                 <p>ML & Deep Learning</p>
                 <a href="expert.html">Voir le profil</a>
             </div>
 
             <div class="expert">
-                <img src="image/portrait4.jpg" alt="Photo de Pr. Jean Moreau">
+                <img src="{% static 'images/portrait4.jpg' %}" alt="Photo de Pr. Jean Moreau">
                 <h3>Pr. Jean Moreau</h3>
                 <p>IA Éthique</p>
                 <a href="#">Voir le profil</a>
             </div>
 
             <div class="expert">
-                <img src="image/portrait5.jpg" alt="Photo de Mme. Léa Dupont">
+                <img src="{% static 'images/portrait5.jpg' %}" alt="Photo de Mme. Léa Dupont">
                 <h3>Mme. Léa Dupont</h3>
                 <p>Vision & Robotique</p>
                 <a href="#">Voir le profil</a>
             </div>
 
             <div class="expert">
-                <img src="david-roy.jpg" alt="Photo de M. David Roy">
+                <img src="{% static 'images/portrait6.jpg' %}" alt="Photo de M. David Roy">
                 <h3>M. David Roy</h3>
                 <p>NLP & Chatbots</p>
                 <a href="#">Voir le profil</a>
             </div>
 
         </div>
-
-        <a href="experts.html" class="btn-primary">Tous nos experts</a>
+        <a href="expert.html" class="btn-primary">Tous nos experts</a>
     </section>
 
 {% endblock %}
