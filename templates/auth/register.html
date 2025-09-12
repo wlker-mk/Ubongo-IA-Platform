@@ -12,39 +12,57 @@
     <div class="signup-container">
         <h1>Créer un compte</h1>
 
+        <!-- Affichage des messages -->
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <p class="{{ message.tags }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
         <div class="tabs">
-            <button class="tab-btn active" onclick="showForm('entreprise')">Entreprise</button>
-            <button class="tab-btn" onclick="showForm('expert')">Expert</button>
+            <button class="tab-btn active" onclick="showForm('entreprise', event)">Entreprise</button>
+            <button class="tab-btn" onclick="showForm('expert', event)">Expert</button>
         </div>
 
         <!-- Formulaire Entreprise -->
-        <form id="form-entreprise" class="form active">
-            <input type="text" placeholder="Nom de l'entreprise" required>
-            <input type="text" placeholder="Secteur d'activité" required>
-            <input type="number" placeholder="Taille de l'entreprise (nombres d'employés)" required>
-            <input type="email" placeholder="Email professionnel" required>
-            <input type="password" placeholder="Mot de passe" required>
+        <form id="form-entreprise" class="form active" method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <input type="hidden" name="form_type" value="entreprise">
+
+            <input type="text" name="company_name" placeholder="Nom de l'entreprise" required>
+            <input type="text" name="sector" placeholder="Secteur d'activité" required>
+            <input type="number" name="size" placeholder="Taille de l'entreprise (nombres d'employés)" required>
+            <input type="email" name="email" placeholder="Email professionnel" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+
             <button type="submit">S'inscrire en tant qu'Entreprise</button>
         </form>
 
         <!-- Formulaire Expert -->
-        <form id="form-expert" class="form">
-            <input type="text" placeholder="Nom complet" required>
-            <input type="text" placeholder="Spécialité (ex: NLP, Data Science)" required>
-            <input type="number" placeholder="Années d'expérience" required>
-            <input type="email" placeholder="Email professionnel" required>
-            <input type="password" placeholder="Mot de passe" required>
+        <form id="form-expert" class="form" method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <input type="hidden" name="form_type" value="expert">
+
+            <input type="text" name="full_name" placeholder="Nom complet" required>
+            <input type="text" name="speciality" placeholder="Spécialité (ex: NLP, Data Science)" required>
+            <input type="number" name="experience" placeholder="Années d'expérience" required>
+            <input type="email" name="email" placeholder="Email professionnel" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+
             <button type="submit">S'inscrire en tant qu'Expert</button>
         </form>
     </div>
 
     <script>
-        function showForm(type) {
-        document.querySelectorAll(".form").forEach(f => f.classList.remove("active"));
-        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        function showForm(type, event) {
+            event.preventDefault();
+            document.querySelectorAll(".form").forEach(f => f.classList.remove("active"));
+            document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
 
-        document.getElementById("form-" + type).classList.add("active");
-        event.target.classList.add("active");
+            document.getElementById("form-" + type).classList.add("active");
+            event.target.classList.add("active");
         }
     </script>
 </body>

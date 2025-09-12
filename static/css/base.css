@@ -85,7 +85,7 @@ header .auth input {
 }
 /* Bouton Connexion / Inscription stylé */
 header .btn-login {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* Rouge, jaune, vert */
+   background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
   color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
@@ -233,7 +233,7 @@ header nav a.active::after {
 .contact-icons a {
   font-size: 18px;
   color: #fff;
-  background: linear-gradient(135deg, #27ae60, #f39c12, #e74c3c); /* Rouge, jaune, vert */
+  background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700); /* Rouge, jaune, vert */
   width: 38px;
   height: 38px;
   border-radius: 50%; /* cercle parfait */
@@ -244,6 +244,6 @@ header nav a.active::after {
 }
 
 .contact-icons a:hover {
-  background: linear-gradient(135deg, #8e44ad, #3498db, #2ecc71); /* autre palette africaine */
+  background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
   transform: scale(1.2);
 }

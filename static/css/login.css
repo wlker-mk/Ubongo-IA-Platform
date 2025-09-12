@@ -40,7 +40,7 @@ body::before {
 /* Titre */
 .login-container h2 {
   margin-bottom: 25px;
-  color: #0066cc;
+  color:#c47a00;;
   font-size: 24px;
   font-weight: bold;
 }
@@ -56,10 +56,10 @@ body::before {
   flex: 1;
   padding: 8px 0;
   margin: 0 5px;
-  border: 1px solid #0066cc;
+  border: 1px solid #c47a00;;
   border-radius: 6px;
   background: #fff;
-  color: #0066cc;
+  color: #c47a00;;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -86,14 +86,14 @@ form input {
 }
 
 form input:focus {
-  border-color: #0066cc;
+  border-color:#c47a00;
   outline: none;
 }
 
 /* Bouton connexion */
 form .btn-primary {
   padding: 10px;
-  background: #0066cc;
+  background: #c47a00;;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -114,7 +114,7 @@ form .btn-primary:hover {
 
 .register-link a {
   text-decoration: none;
-  color: #0066cc;
+  color: #c47a00;;
   font-weight: bold;
 }
 

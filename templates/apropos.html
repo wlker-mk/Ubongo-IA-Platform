@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/apropos.css' %}">
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/apropos.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Notre Histoire</h1>
+            <p>Allier la sagesse africaine à l'intelligence artificielle pour transformer l'avenir du continent</p>
+            <div class="african-divider"></div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-text scroll-animate">
+                    <h2>Notre Mission</h2>
+                    <p>Nous sommes une entreprise de consulting spécialisée dans l'intelligence artificielle, ancrée dans les valeurs et la richesse culturelle africaine. Notre mission est de démocratiser l'accès à l'IA en proposant des solutions innovantes et adaptées au contexte africain.</p>
+                    <br>
+                    <p>Nous croyons que l'Afrique possède un potentiel immense pour devenir un leader mondial en matière d'IA, en s'appuyant sur sa diversité culturelle, sa créativité et son esprit d'innovation.</p>
+                </div>
+                <div class="mission-visual scroll-animate">
+                    <span class="african-symbol">🌍</span>
+                    <h3>L'Afrique à l'Ère de l'IA</h3>
+                    <p>Connecter les traditions ancestrales aux technologies de demain pour créer un avenir durable et inclusif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values, Section -->
+    <section class="values">
+        <div class="container">
+            <h2 class="scroll-animate">Nos Valeurs</h2>
+            <div class="values-grid">
+                <div class="value-card scroll-animate">
+                    <div class="value-icon">🤝</div>
+                    <h3>Ubuntu</h3>
+                    <p>Nous croyons en l'humanité partagée et la collaboration. Votre succès est notre succès, et nous travaillons ensemble pour atteindre des objectifs communs.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-icon">🎯</div>
+                    <h3>Excellence</h3>
+                    <p>Nous visons l'excellence dans tous nos projets, en combinant expertise technique de pointe et compréhension profonde des enjeux locaux.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-icon">🌱</div>
+                    <h3>Innovation Durable</h3>
+                    <p>Nous développons des solutions IA qui respectent l'environnement et contribuent au développement durable du continent africain.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-icon">🔗</div>
+                    <h3>Inclusivité</h3>
+                    <p>Nous rendons l'IA accessible à tous, des startups aux grandes entreprises, en proposant des solutions adaptées à chaque contexte.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-icon">📚</div>
+                    <h3>Transmission</h3>
+                    <p>Nous formons et accompagnons les talents africains pour créer un écosystème IA autonome et pérenne sur le continent.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-icon">🚀</div>
+                    <h3>Agilité</h3>
+                    <p>Nous nous adaptons rapidement aux évolutions technologiques et aux besoins spécifiques de chaque marché africain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="scroll-animate">Notre Équipe</h2>
+            <div class="team-grid">
+                <div class="team-member scroll-animate">
+                    <div class="member-avatar">👨‍💼</div>
+                    <h3>Kwame Asante</h3>
+                    <p>CEO & Fondateur</p>
+                    <p>Expert en IA avec 15 ans d'expérience, diplômé de MIT et passionné par l'innovation africaine.</p>
+                </div>
+                <div class="team-member scroll-animate">
+                    <div class="member-avatar">👩‍💻</div>
+                    <h3>Amina Diallo</h3>
+                    <p>CTO</p>
+                    <p>Spécialiste en Machine Learning et architectures distribuées, ancienne de Google AI.</p>
+                </div>
+                <div class="team-member scroll-animate">
+                    <div class="member-avatar">👨‍🔬</div>
+                    <h3>Tchad Mbenga</h3>
+                    <p>Lead Data Scientist</p>
+                    <p>Expert en traitement de langues africaines et NLP, PhD en Intelligence Artificielle.</p>
+                </div>
+                <div class="team-member scroll-animate">
+                    <div class="member-avatar">👩‍💼</div>
+                    <h3>Fatou Kone</h3>
+                    <p>Directrice Stratégie</p>
+                    <p>Consultante senior avec une expertise en transformation digitale des entreprises africaines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <div class="vision-content scroll-animate">
+                <h2>Notre Vision</h2>
+                <p>Faire de l'Afrique un hub mondial de l'intelligence artificielle d'ici 2030. Nous imaginons un continent où chaque entreprise, organisation et individu peut bénéficier des avantages de l'IA pour améliorer sa productivité, sa créativité et son impact social.</p>
+                <br>
+                <p>Notre approche unique combine l'excellence technologique internationale avec une compréhension profonde des réalités africaines, créant ainsi des solutions IA véritablement adaptées et efficaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container scroll-animate">
+            <h2>Prêt à Transformer Votre Entreprise ?</h2>
+            <p>Rejoignez-nous dans cette aventure passionnante vers l'avenir de l'IA en Afrique.</p>
+            <br>
+            <a href="#contact" class="btn-primary">Commencer Votre Diagnostic IA</a>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header fade-in">
+                <h1>Contactez-Nous</h1>
+                <p>Nous sommes là pour vous accompagner dans votre transformation digitale. N'hésitez pas à nous contacter pour discuter de vos projets IA.</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form fade-in">
+                    <h2>Envoyez-nous un Message</h2>
+                    <div class="success-message" id="successMessage">
+                        Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nom">Nom complet *</label>
+                            <input type="text" id="nom" name="nom" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse email *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entreprise">Entreprise</label>
+                            <input type="text" id="entreprise" name="entreprise" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sujet">Sujet *</label>
+                            <select id="sujet" name="sujet" class="form-control" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="diagnostic">Diagnostic IA</option>
+                                <option value="consulting">Consulting stratégique</option>
+                                <option value="formation">Formation et accompagnement</option>
+                                <option value="developpement">Développement de solutions</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Décrivez-nous votre projet ou vos besoins en détail..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Envoyer le Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info slide-in">
+                    <h2>Informations de Contact</h2>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Adresse</h3>
+                            <p>123 Avenue de l'Innovation<br>
+                            Dakar, Sénégal<br>
+                            BP 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Téléphone</h3>
+                            <p>+221 33 123 45 67<br>
+                            +221 77 987 65 43</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>contact@africaia-consulting.com<br>
+                            info@africaia-consulting.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-content">
+                            <h3>Horaires</h3>
+                            <p>Lundi - Vendredi: 8h00 - 18h00<br>
+                            Samedi: 9h00 - 13h00<br>
+                            Dimanche: Fermé</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🌐</div>
+                        <div class="info-content">
+                            <h3>Réseaux Sociaux</h3>
+                            <p>LinkedIn: @africaia-consulting<br>
+                            Twitter: @africaia_ai<br>
+                            Facebook: AfricaIA Consulting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <p>🗺 Carte interactive - Localisation à Dakar, Sénégal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header fade-in">
+                <h2>Questions Fréquentes</h2>
+                <p>Trouvez rapidement les réponses aux questions les plus courantes</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Combien de temps prend un diagnostic IA ?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Un diagnostic IA complet prend généralement entre 2 à 4 semaines selon la complexité de votre organisation et le nombre de processus à analyser.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont vos tarifs ?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos tarifs varient selon le type de service et la taille de votre projet. Contactez-nous pour obtenir un devis personnalisé adapté à vos besoins spécifiques.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Travaillez-vous avec des PME ?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument ! Nous adaptons nos services aux PME avec des solutions flexibles et abordables. Nous croyons que l'IA doit être accessible à toutes les entreprises.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposez-vous de la formation ?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons des formations sur mesure pour vos équipes, allant des concepts de base de l'IA aux formations techniques avancées.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Dans quels pays intervenez-vous ?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous intervenons principalement en Afrique de l'Ouest, mais nous pouvons également travailler à distance avec des clients dans toute l'Afrique et même internationalement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -54,7 +54,7 @@ body {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60);
+    background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
 }
 
 
@@ -160,7 +160,7 @@ body {
 }
 
 .course a:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* africain */
+  background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
   color: #fff;
   border-color: transparent;
 }
@@ -180,7 +180,7 @@ body {
 }
 
 .courses .btn-primary:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* africain */
+    background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
   color: #fff;
   border-color: transparent;
   transform: scale(1.05);
@@ -350,7 +350,7 @@ body {
 }
 
 .expert a:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* Rouge, Jaune, Vert */
+    background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700); /* Rouge, Jaune, Vert */
   color: #fff;
   border-color: transparent;
 }
@@ -370,7 +370,7 @@ body {
 }
 
 .experts .btn-primary:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* dégradé africain */
+    background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700); /* dégradé africain */
   color: #fff;
   border-color: transparent;
   transform: scale(1.05);

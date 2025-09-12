@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Ubongo IAcademy</title>
     {% load static %}
+    {% block extra_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    {% endblock %}
 </head>
 <body>
 
@@ -13,14 +15,24 @@
         <div class="login-container">
             <h2>Connexion</h2>
 
+            <!-- Affichage des messages d'erreur -->
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <p class="{{ message.tags }}">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             <!-- Sélection du type de compte -->
             <div class="user-types">
-                <button data-type="expert">Expert</button>
-                <button data-type="entreprise">Entreprise</button>
+                <button type="button" data-type="expert">Expert</button>
+                <button type="button" data-type="entreprise">Entreprise</button>
             </div>
 
             <!-- Formulaire -->
-            <form action="#" method="post">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
                 <input type="hidden" name="user_type" id="user_type" value="apprenant">
 
                 <label>Email :</label>
@@ -32,23 +44,22 @@
                 <button type="submit" class="btn-primary">Se connecter</button>
             </form>
 
-                <p class="register-link">
-                    Pas encore de compte ? <a href="{% url 'register' %}">Inscrivez-vous</a>
-                </p>
+            <p class="register-link">
+                Pas encore de compte ? <a href="{% url 'register' %}">Inscrivez-vous</a>
+            </p>
         </div>
     </section>
 
     <script>
-        // JS pour activer le bon bouton
         const buttons = document.querySelectorAll(".user-types button");
         const hiddenInput = document.getElementById("user_type");
 
         buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            buttons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            hiddenInput.value = btn.dataset.type;
-        });
+            btn.addEventListener("click", () => {
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                hiddenInput.value = btn.dataset.type;
+            });
         });
     </script>
 

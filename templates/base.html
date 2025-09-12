@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     {% block extra_css %}{% endblock %}
+    {% block extra_js %}{% endblock %}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -15,21 +16,21 @@
     <!-- HEADER -->
     <header>
         <div class="logo">
-            <img src="../images/image2.jpeg" alt="Logo IAcademy">
+            <img src="{% static 'images/logo.png' %}" alt="Logo IAcademy">
             <span>| Ubongo</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Homepage</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href=" {% url 'diagnostic' %} ">consulting </a></li>
                 <li><a href="expert.html">Experts IA</a></li>
-                <li><a href="#">A propos</a></li>
+                <li><a href="{% url 'about'%}">A propos</a></li>
                 <li><a href="espaceCommunautaire.html">Communauté</a></li>
             </ul>
         </nav>
         <div class="auth">
             <input type="text" placeholder="Rechercher cours, experts…">
-            <a href="login.html" class="btn-login">Connexion / Inscription</a>
+            <a href="{% url 'login' %}" class="btn-login">Connexion / Inscription</a>
         </div>
     </header>
 

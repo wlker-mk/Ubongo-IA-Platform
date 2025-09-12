@@ -4,3 +4,9 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, "index.html")
+
+def diagnostic(request):
+    return render(request, "diagnostic.html")
+
+def about(request):
+    return render(request, "apropos.html")
