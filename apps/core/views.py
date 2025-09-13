@@ -8,5 +8,11 @@ def index(request):
 def diagnostic(request):
     return render(request, "diagnostic.html")
 
+def expertIA(request):
+    return render(request, "expertIA.html")
+
 def about(request):
     return render(request, "apropos.html")
+
+def community(request):
+    return render(request, "community.html")

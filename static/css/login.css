@@ -16,15 +16,6 @@ body {
   padding: 0;
 }
 
-/* Overlay pour pâlir l’image */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.5); /* blanc semi-transparent */
-  z-index: 0;
-}
-
 /* Container du formulaire */
 .login-container {
   position: relative;
@@ -66,7 +57,7 @@ body::before {
 
 .user-types button.active,
 .user-types button:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60); /* dégradé africain */
+  background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700); /* dégradé africain */
   color: #fff;
   border-color: transparent;
 }
@@ -103,7 +94,7 @@ form .btn-primary {
 }
 
 form .btn-primary:hover {
-  background: linear-gradient(45deg, #E74C3C, #F1C40F, #27AE60);
+  background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
 }
 
 /* Lien d'inscription */

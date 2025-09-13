@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/community.css' %}">
+{% endblock %}
+{% block content %}
+    <main class="main-container">
+        <!-- Page Title -->
+        <section class="page-header">
+            <h1>Espace Communautaire</h1>
+            <p>Connectez-vous avec d'autres passionnés d'IA, partagez vos connaissances, participez à des défis et progressez ensemble.</p>
+        </section>
+
+        <div class="content-wrapper">
+            <!-- Left Content -->
+            <div class="left-content">
+                <div class="section-header">
+                    <h2>Discussions Thématiques</h2>
+                    <button class="create-btn">Créer un nouveau sujet</button>
+                </div>
+
+                <!-- Discussion Topics -->
+                <div class="discussion-card">
+                    <h3>Meilleures pratiques pour le déploiement de modèles LLM</h3>
+                    <span class="topic-tag">Deep Learning</span>
+                    <p>Discutons des stratégies efficaces pour déployer des modèles de langage à grande échelle en production, incluant l'optimisation et la surveillance.</p>
+                    <div class="card-footer">
+                        <span class="responses">💬 42 réponses</span>
+                        <a href="#" class="view-link">Voir le sujet</a>
+                    </div>
+                </div>
+
+                <div class="discussion-card">
+                    <h3>Comprendre l'IA Éthique dans les applications médicales</h3>
+                    <span class="topic-tag ethics">IA Éthique</span>
+                    <p>Un débat sur les implications éthiques de l'IA dans le secteur de la santé : biais, confidentialité des données et responsabilité.</p>
+                    <div class="card-footer">
+                        <span class="responses">💬 28 réponses</span>
+                        <a href="#" class="view-link">Voir le sujet</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="sidebar">
+                <!-- Contributors Ranking -->
+                <div class="sidebar-section">
+                    <h3>Classement des contributeurs</h3>
+                    <div class="contributor-list">
+                        <div class="contributor-item">
+                            <div class="rank">1.</div>
+                            <div class="avatar"></div>
+                            <div class="contributor-info">
+                                <div class="name">Dr. Émilie Dubois</div>
+                                <div class="points">1540 points</div>
+                            </div>
+                        </div>
+                        <div class="contributor-item">
+                            <div class="rank">2.</div>
+                            <div class="avatar"></div>
+                            <div class="contributor-info">
+                                <div class="name">M. Jean Lefevre</div>
+                                <div class="points">1280 points</div>
+                            </div>
+                        </div>
+                        <div class="contributor-item">
+                            <div class="rank">3.</div>
+                            <div class="avatar"></div>
+                            <div class="contributor-info">
+                                <div class="name">Mme. Sarah Chen</div>
+                                <div class="points">950 points</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Badges -->
+                <div class="sidebar-section">
+                    <h3>Badges communautaires</h3>
+                    <div class="badges-grid">
+                        <div class="badge-item">
+                            <div class="badge-icon">👤</div>
+                            <div class="badge-name">Maître du Débat</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-icon">⚡</div>
+                            <div class="badge-name">Résolveur de Problèmes</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-icon">🔍</div>
+                            <div class="badge-name">Explorateur IA</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-icon">🎓</div>
+                            <div class="badge-name">Mentor Communautaire</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="sidebar-section">
+                    <h3>Événements à venir</h3>
+                    <div class="event-item">
+                        <h4>Hackathon IA : Solutions pour le climat</h4>
+                        <div class="event-date">📅 15-17 Novembre 2024</div>
+                        <a href="#" class="event-link">Voir les détails</a>
+                    </div>
+                    <div class="event-item">
+                        <h4>Défi : Détection d'anomalies industrielles</h4>
+                        <div class="event-date">📅 1er - 30 Octobre 2024</div>
+                        <a href="#" class="event-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

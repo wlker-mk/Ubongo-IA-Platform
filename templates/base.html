@@ -21,11 +21,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="{% url 'index' %}" class="active">Home</a></li>
                 <li><a href=" {% url 'diagnostic' %} ">consulting </a></li>
                 <li><a href="expert.html">Experts IA</a></li>
                 <li><a href="{% url 'about'%}">A propos</a></li>
-                <li><a href="espaceCommunautaire.html">Communauté</a></li>
+                <li><a href="{% url 'community'%}">Communauté</a></li>
             </ul>
         </nav>
         <div class="auth">
@@ -58,7 +58,7 @@
             <div class="footer-links">
                 <h4>Liens Rapides</h4>
                 <ul>
-                    <li><a href="acuiel.html">Accueil</a></li>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
                     <li><a href="categoriesCours.html">Cours</a></li>
                     <li><a href="tarification.html">Tarification</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -80,7 +80,7 @@
             <div class="footer-links">
                 <h4>Entreprise</h4>
                 <ul>
-                    <li><a href="#">À Propos</a></li>
+                    <li><a href="{% url 'about' %}">À Propos</a></li>
                     <li><a href="#">Carrières</a></li>
                     <li><a href="#">Partenaires</a></li>
                     <li><a href="rgpd.html">RGPD</a></li>
