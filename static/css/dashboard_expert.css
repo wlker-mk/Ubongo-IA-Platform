@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e293b;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+}
+
+/* KPI Section */
+.kpi-section {
+    margin-bottom: 3rem;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.kpi-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+}
+
+.kpi-card h3 {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.kpi-value.positive {
+    color: #059669;
+}
+
+.kpi-desc {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.kpi-link {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.kpi-link:hover {
+    text-decoration: underline;
+}
+
+/* Alerts Section */
+.alerts-section {
+    margin-bottom: 3rem;
+}
+
+.alerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.alert-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+    border: 1px solid #f1f5f9;
+}
+
+.alert-warning {
+    border-left: 4px solid #f59e0b;
+}
+
+.alert-trend {
+    border-left: 4px solid #10b981;
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+}
+
+.alert-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.alert-content p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.alert-link {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Charts Section */
+.charts-section {
+    margin-bottom: 3rem;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.chart-card, .recommendations-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+}
+
+.chart-card h3, .recommendations-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.chart-desc {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.chart-container {
+    height: 200px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    height: 150px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.bar {
+    background: #6366f1;
+    width: 50px;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.bar:nth-child(2) {
+    background: #ec4899;
+}
+
+.bar:nth-child(3) {
+    background: #f59e0b;
+}
+
+.bar:nth-child(4) {
+    background: #64748b;
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.75rem;
+    color: #64748b;
+    text-align: center;
+    width: 80px;
+    transform: translateX(-15px);
+}
+
+.recommendation-list {
+    margin-bottom: 1rem;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.recommendation-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.rec-status {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.rec-status.warning {
+    color: #f59e0b;
+}
+
+.rec-status.success {
+    color: #10b981;
+}
+
+.rec-status.error {
+    color: #ef4444;
+}
+
+.recommendation-item div {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.engagement-list {
+    margin-top: 1rem;
+}
+
+.engagement-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.engagement-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.engagement-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #1e293b;
+}
+
+.engagement-item p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* History Section */
+.history-section {
+    margin-bottom: 3rem;
+}
+
+.table-container {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+}
+
+.missions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.missions-table th {
+    background: #f8fafc;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.missions-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.missions-table tr:last-child td {
+    border-bottom: none;
+}
+
+.missions-table tr:hover {
+    background: #f9fafb;
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+}
+
+.status.completed {
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.status.in-progress {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background: #f1f5f9;
+}
+
+/* Connected Company Banner */
+.connected-company-banner img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .company-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-box input {
+        width: 200px;
+    }
+
+    .connected-company-banner {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .company-profile-main {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .company-name-main {
+        font-size: 1.5rem;
+    }
+
+    .company-description {
+        font-size: 0.9rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alerts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .missions-table {
+        font-size: 0.8rem;
+    }
+
+    .missions-table th,
+    .missions-table td {
+        padding: 0.5rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .connected-company-banner {
+        padding: 1rem;
+    }
+
+    .connected-company-banner img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .company-avatar-large {
+        width: 35px;
+        height: 35px;
+    }
+
+    .company-name-main {
+        font-size: 1.3rem;
+    }
+
+    .kpi-card, .alert-card, .chart-card, .recommendations-card {
+        padding: 1rem;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+}

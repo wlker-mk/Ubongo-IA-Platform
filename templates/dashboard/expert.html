@@ -1,10 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css " href="{% static 'css/dashboard_expert.css' %}">
+{% endblock %}
+{% block content %}
+    <main class="container">
+        <!-- Entreprise Connectée -->
+        <div class="connected-company-banner">
+            <div class="company-profile-main">
+                <div class="company-logo-large">
+                    <img src="image/entreprise.jpeg" alt="TechCorp Solutions" class="company-avatar-large">
+                </div>
+                <div class="company-info-main">
+                    <h2 class="company-name-main">TechCorp Solutions</h2>
+                    <p class="company-description">Entreprise spécialisée en Intelligence Artificielle et Transformation Digitale</p>
+                    <div class="company-status-main">
+                        <div class="status-indicator active"></div>
+                        <span>Connecté en tant qu'Expert IA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</body>
-</html>
+        <h1 class="main-title">Tableau de bord Expert</h1>
+
+        <section class="kpi-section">
+            <h2 class="section-title">Vos Indicateurs Clés de Performance</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>ROI Moyen Généré</h3>
+                    <div class="kpi-value positive">35% ↗</div>
+                    <p class="kpi-desc">+3% depuis le mois dernier</p>
+                    <a href="#" class="kpi-link">Détails</a>
+                </div>
+                <div class="kpi-card">
+                    <h3>Taux d'Impact IA</h3>
+                    <div class="kpi-value">85% -</div>
+                    <p class="kpi-desc">Stable et constant</p>
+                    <a href="#" class="kpi-link">Détails</a>
+                </div>
+                <div class="kpi-card">
+                    <h3>Satisfaction Client</h3>
+                    <div class="kpi-value positive">4.8/5 ↗</div>
+                    <p class="kpi-desc">Retour positif général</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Diagnostics Réalisés</h3>
+                    <div class="kpi-value positive">12 ↗</div>
+                    <p class="kpi-desc">+2 nouveaux ce trimestre</p>
+                    <a href="#" class="kpi-link">Détails</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="alerts-section">
+            <h2 class="section-title">Alertes et Tendances Importantes</h2>
+            <div class="alerts-grid">
+                <div class="alert-card alert-warning">
+                    <div class="alert-icon">⚠</div>
+                    <div class="alert-content">
+                        <h3>Alerte: Baisse adoption reco</h3>
+                        <p>Une légère baisse dans l'adoption des recommandations par les clients dans le secteur financier.</p>
+                        <a href="#" class="alert-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="alert-card alert-trend">
+                    <div class="alert-icon">📈</div>
+                    <div class="alert-content">
+                        <h3>Tendance: Demandes en croissance</h3>
+                        <p>Augmentation de 20% des demandes de diagnostic IA dans le secteur de la santé.</p>
+                        <a href="#" class="alert-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Adoption des Recommandations Post-Diagnostic</h3>
+                    <p class="chart-desc">Vue d'ensemble du taux des recommandations de diagnostic</p>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%">
+                                <span class="bar-label">Implémentées</span>
+                            </div>
+                            <div class="bar" style="height: 80%">
+                                <span class="bar-label">En cours</span>
+                            </div>
+                            <div class="bar" style="height: 40%">
+                                <span class="bar-label">Rejetées</span>
+                            </div>
+                            <div class="bar" style="height: 20%">
+                                <span class="bar-label">Non adoptées</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendations-card">
+                    <h3>Suivi des Recommandations</h3>
+                    <div class="recommendation-list">
+                        <div class="recommendation-item">
+                            <span class="rec-status warning">⚠</span>
+                            <div>
+                                <strong>TechSolutions Inc.</strong> - Implémenter une solution de monitoring AI pour le RPA.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <span class="rec-status warning">⚠</span>
+                            <div>
+                                <strong>FinanceCorp SA</strong> - Réviser la stratégie d'acquisition de données pour le ML.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <span class="rec-status success">✓</span>
+                            <div>
+                                <strong>HealthCare Innovations</strong> - Former l'équipe médicale aux bases de l'éthique de l'IA.
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <span class="rec-status error">⚠</span>
+                            <div>
+                                <strong>RetailSpark Ltd.</strong> - Étendre le modèle de recommandation aux canaux mobiles.
+                            </div>
+                        </div>
+                    </div>
+                    <h4 style="margin-top: 2rem;">Engagements Clients Actifs</h4>
+                    <div class="engagement-list">
+                        <div class="engagement-item">
+                            <strong>GlobalLogistics</strong>
+                            <p>Optimisation de la chaîne d'approvisionnement</p>
+                        </div>
+                        <div class="engagement-item">
+                            <strong>EduFuture Labs</strong>
+                            <p>Développement d'outils d'apprentissage adaptatif</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <h2 class="section-title">Historique des Missions</h2>
+            <div class="table-container">
+                <table class="missions-table">
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                            <th>Résultat Clé</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TechSolutions Inc.</td>
+                            <td>2023-11-15</td>
+                            <td><span class="status completed">Terminé</span></td>
+                            <td>Optimisation des processus RPA avec 15% d'efficacité accrue.</td>
+                            <td><button class="action-btn">👁</button></td>
+                        </tr>
+                        <tr>
+                            <td>FinanceCorp SA</td>
+                            <td>2024-01-20</td>
+                            <td><span class="status in-progress">En cours</span></td>
+                            <td>Développement d'un modèle de détection de fraude avancé.</td>
+                            <td><button class="action-btn">👁</button></td>
+                        </tr>
+                        <tr>
+                            <td>HealthCare Innovations</td>
+                            <td>2024-03-01</td>
+                            <td><span class="status pending">En attente</span></td>
+                            <td>Analyse préliminaire pour l'intégration de l'IA dans les diagnostics médicaux.</td>
+                            <td><button class="action-btn">👁</button></td>
+                        </tr>
+                        <tr>
+                            <td>RetailSpark Ltd.</td>
+                            <td>2024-02-10</td>
+                            <td><span class="status completed">Terminé</span></td>
+                            <td>Mise en place d'un système de recommandation produit, +30% de ventes croisées.</td>
+                            <td><button class="action-btn">👁</button></td>
+                        </tr>
+                        <tr>
+                            <td>LogisticsPro</td>
+                            <td>2024-04-05</td>
+                            <td><span class="status in-progress">En cours</span></td>
+                            <td>Conception d'un algorithme d'optimisation des itinéraires de livraison.</td>
+                            <td><button class="action-btn">👁</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+{% endblock %}

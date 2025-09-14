@@ -1,0 +1,201 @@
+/* Main container */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filters Section */
+.filters-section {
+    margin-bottom: 40px;
+}
+
+.filters-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-tag {
+    background: white;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tag:hover,
+.filter-tag.active {
+    background: #c47a00;
+    color: white;
+    border-color: #c47a00;
+}
+
+/* Experts Grid */
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Expert Card */
+.expert-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expert-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expert-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.expert-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.expert-info {
+    text-align: center;
+}
+
+.expert-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.expert-title {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+/* Rating */
+.expert-rating {
+    margin-bottom: 16px;
+}
+
+.stars {
+    margin-bottom: 4px;
+}
+
+.star {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Specialties */
+.expert-specialties {
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.specialty-tag {
+    background: #f0f0f0;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* Price */
+.expert-price {
+    color: #c47a00;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* See More Link */
+.see-more-link {
+    display: inline-block;
+    background: #c47a00;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.see-more-link:hover {
+    background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
+}
+
+/* Load More Section */
+.load-more-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.load-more-btn {
+    background: white;
+    border: 2px solid #c47a00;
+    color: #c47a00;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: linear-gradient(90deg, #FFD700, #8e3a2f, #1c1c1c, #FFD700);
+    color: white;
+    border: none;
+}

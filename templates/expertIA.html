@@ -4,4 +4,201 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/expertIA.css' %}">
 {% endblock %}
 {% block content %}
+<main class="main-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Nos Experts IA</h1>
+            <p>Découvrez nos spécialistes en intelligence artificielle et choisissez l'expert qui correspond le mieux à vos besoins</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <h3>Filtrer par spécialité</h3>
+            <div class="filter-tags">
+                <button class="filter-tag active">Tous</button>
+                <button class="filter-tag">Deep Learning</button>
+                <button class="filter-tag">Vision par Ordinateur</button>
+                <button class="filter-tag">NLP</button>
+                <button class="filter-tag">IA Éthique</button>
+                <button class="filter-tag">Santé IA</button>
+                <button class="filter-tag">FinTech</button>
+            </div>
+        </div>
+
+        <!-- Experts Grid -->
+        <div class="experts-grid">
+            <!-- Expert 1 -->
+            <div class="expert-card">
+                <div class="expert-image">
+                    <img src="{% static  'images/elodie_ubois.jpg'%}" alt="Dr. Élodie Dubois">
+                </div>
+                <div class="expert-info">
+                    <h3 class="expert-name">Dr. Élodie Dubois</h3>
+                    <p class="expert-title">Architecte IA & Spécialiste en Deep Learning</p>
+                    <div class="expert-rating">
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star empty">⭐</span>
+                        </div>
+                        <span class="rating-text">4.8 (75 avis)</span>
+                    </div>
+                    <div class="expert-specialties">
+                        <span class="specialty-tag">Deep Learning</span>
+                        <span class="specialty-tag">IA Éthique</span>
+                        <span class="specialty-tag">Santé IA</span>
+                    </div>
+                    <p class="expert-price">À partir de 250€ / heure</p>
+                    <a href="expert-profile.html" class="see-more-link">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Expert 2 -->
+            <div class="expert-card">
+                <div class="expert-image">
+                    <img src="{% static  'images/marc_laurent.jpg' %}" alt="Prof. Marc Laurent">
+                </div>
+                <div class="expert-info">
+                    <h3 class="expert-name">Prof. Marc Laurent</h3>
+                    <p class="expert-title">Expert en Vision par Ordinateur</p>
+                    <div class="expert-rating">
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <span class="rating-text">4.9 (63 avis)</span>
+                    </div>
+                    <div class="expert-specialties">
+                        <span class="specialty-tag">Vision par Ordinateur</span>
+                        <span class="specialty-tag">Robotique</span>
+                        <span class="specialty-tag">Industrie 4.0</span>
+                    </div>
+                    <p class="expert-price">À partir de 300€ / heure</p>
+                    <a href="expert-profile.html" class="see-more-link">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Expert 3 -->
+            <div class="expert-card">
+                <div class="expert-image">
+                    <img src="{% static 'images/sarah.jpg' %} " alt="Dr. Sarah Chen">
+                </div>
+                <div class="expert-info">
+                    <h3 class="expert-name">Dr. Sarah Chen</h3>
+                    <p class="expert-title">Spécialiste NLP & IA Conversationnelle</p>
+                    <div class="expert-rating">
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <span class="rating-text">4.7 (89 avis)</span>
+                    </div>
+                    <div class="expert-specialties">
+                        <span class="specialty-tag">NLP</span>
+                        <span class="specialty-tag">Chatbots</span>
+                        <span class="specialty-tag">FinTech</span>
+                    </div>
+                    <p class="expert-price">À partir de 280€ / heure</p>
+                    <a href="expert-profile.html" class="see-more-link">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Expert 4 -->
+            <div class="expert-card">
+                <div class="expert-image">
+                    <img src="{% static 'images/ahmed.jpg' %} " alt="Dr. Ahmed Khalil">
+                </div>
+                <div class="expert-info">
+                    <h3 class="expert-name">Dr. Ahmed Khalil</h3>
+                    <p class="expert-title">Expert en IA pour la Finance</p>
+                    <div class="expert-rating">
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star empty">⭐</span>
+                        </div>
+                        <span class="rating-text">4.6 (52 avis)</span>
+                    </div>
+                    <div class="expert-specialties">
+                        <span class="specialty-tag">FinTech</span>
+                        <span class="specialty-tag">Algorithmes Prédictifs</span>
+                        <span class="specialty-tag">Blockchain</span>
+                    </div>
+                    <p class="expert-price">À partir de 320€ / heure</p>
+                    <a href="expert-profile.html" class="see-more-link">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Expert 5 -->
+            <div class="expert-card">
+                <div class="expert-image">
+                    <img src=" {% static  'images/lisa.jpg' %}" alt="Dr. Lisa Rodriguez">
+                </div>
+                <div class="expert-info">
+                    <h3 class="expert-name">Dr. Lisa Rodriguez</h3>
+                    <p class="expert-title">Consultante en IA Éthique</p>
+                    <div class="expert-rating">
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <span class="rating-text">4.9 (41 avis)</span>
+                    </div>
+                    <div class="expert-specialties">
+                        <span class="specialty-tag">IA Éthique</span>
+                        <span class="specialty-tag">Gouvernance IA</span>
+                        <span class="specialty-tag">Conformité</span>
+                    </div>
+                    <p class="expert-price">À partir de 290€ / heure</p>
+                    <a href="expert-profile.html" class="see-more-link">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Expert 6 -->
+            <div class="expert-card">
+                <div class="expert-image">
+                    <img src="{% static 'images/jean_pierre.jpg' %}" alt="Prof. Jean-Pierre Martin">
+                </div>
+                <div class="expert-info">
+                    <h3 class="expert-name">Prof. Jean-Pierre Martin</h3>
+                    <p class="expert-title">Spécialiste en Machine Learning</p>
+                    <div class="expert-rating">
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star empty">⭐</span>
+                        </div>
+                        <span class="rating-text">4.5 (67 avis)</span>
+                    </div>
+                    <div class="expert-specialties">
+                        <span class="specialty-tag">Machine Learning</span>
+                        <span class="specialty-tag">Data Science</span>
+                        <span class="specialty-tag">Recherche</span>
+                    </div>
+                    <p class="expert-price">À partir de 240€ / heure</p>
+                    <a href="expert-profile.html" class="see-more-link">Voir plus</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Section -->
+        <div class="load-more-section">
+            <button class="load-more-btn">Charger plus d'experts</button>
+        </div>
+    </main>
 {% endblock %}
