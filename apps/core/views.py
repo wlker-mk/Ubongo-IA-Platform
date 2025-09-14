@@ -8,8 +8,11 @@ def index(request):
 def diagnostic(request):
     return render(request, "diagnostic.html")
 
-def expertIA(request):
+def expert(request):
     return render(request, "expertIA.html")
+
+def fiche_expert(request):
+    return render(request, "fiche_expert.html")
 
 def about(request):
     return render(request, "apropos.html")

@@ -6,10 +6,7 @@
     <title>{% block title %}Ubungo{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     {% block extra_css %}{% endblock %}
-    {% block extra_js %}{% endblock %}
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
             <ul>
                 <li><a href="{% url 'index' %}" class="active">Home</a></li>
                 <li><a href=" {% url 'diagnostic' %} ">consulting </a></li>
-                <li><a href="expert.html">Experts IA</a></li>
+                <li><a href="{% url 'expertIA'%}">Experts IA</a></li>
                 <li><a href="{% url 'about'%}">A propos</a></li>
                 <li><a href="{% url 'community'%}">Communauté</a></li>
             </ul>
@@ -59,9 +56,9 @@
                 <h4>Liens Rapides</h4>
                 <ul>
                     <li><a href="{% url 'index' %}">Accueil</a></li>
-                    <li><a href="categoriesCours.html">Cours</a></li>
-                    <li><a href="tarification.html">Tarification</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="{% url 'diagnostic' %}">Consulting</a></li>
+                    <li><a href="{% url 'payment' %}">Payement</a></li>
+                    <li><a href="{% url 'community' %}">Communauté</a></li>
                 </ul>
             </div>
 
@@ -104,6 +101,5 @@
             <p>Made with <i class="fa-solid fa-heart" style="color:#8e44ad;"></i> by <span>VotreSite</span></p>
         </div>
     </footer>
-
 </body>
 </html>

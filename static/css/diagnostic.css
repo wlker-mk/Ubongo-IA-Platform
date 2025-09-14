@@ -13,7 +13,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><rect fill="%23e0e0e0" x="100" y="150" width="1000" height="300" rx="10"/><circle fill="%23A0522D" cx="200" cy="300" r="30"/><circle fill="%23A0522D" cx="300" cy="280" r="25"/><circle fill="%23A0522D" cx="400" cy="320" r="20"/></svg>');
+    background: url("../images/diagnostic-img2.png") no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 500px;

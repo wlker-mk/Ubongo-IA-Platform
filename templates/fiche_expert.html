@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css " href="{% static 'css/fiche_expert.css' %}">
+{% endblock %}
+{% block content %}
+<main class="main-container">
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Profil Expert IA</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left Profile Card -->
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="{% static  'images/elodie_ubois.jpg'%} " alt="Dr. Élodie Dubois">
+                </div>
+                <h2 class="profile-name">Dr. Élodie Dubois</h2>
+                <p class="profile-title">Architecte IA & Spécialiste en Deep Learning</p>
+
+                <div class="rating">
+                    <div class="stars">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star empty">⭐</span>
+                    </div>
+                    <span class="rating-text">(4.8 / 5, 75 avis)</span>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary">Réserver une session</button>
+                    <button class="btn-secondary">Proposer une mission</button>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="profile-content">
+                <!-- About Section -->
+                <section class="content-section">
+                    <h3>À propos</h3>
+                    <p>Dr. Dubois est une figure de proue dans le domaine de l'intelligence artificielle, avec plus de 10 années d'expérience dans la conception et le déploiement de solutions d'apprentissage profond pour les secteurs de la santé et de la finance. Passionnée par l'éthique en IA, elle aide les entreprises à transformer leurs défis en opportunités stratégiques.</p>
+                </section>
+
+                <!-- Specialities Section -->
+                <section class="content-section">
+                    <h3>Spécialités</h3>
+                    <div class="tags-container">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Traitement du Langage Naturel (TLN)</span>
+                        <span class="tag">Vision par Ordinateur</span>
+                        <span class="tag">IA Éthique</span>
+                        <span class="tag">Stratégie d'IA</span>
+                        <span class="tag">Santé IA</span>
+                        <span class="tag">FinTech</span>
+                    </div>
+                </section>
+
+                <!-- Professional Experience -->
+                <section class="content-section">
+                    <h3>Expérience Professionnelle</h3>
+                    <div class="experience-item">
+                        <div class="experience-icon">🏢</div>
+                        <div class="experience-details">
+                            <h4>Scientifique en Chef en IA</h4>
+                            <p class="company">InnovAI Tech Solutions</p>
+                            <p class="period">2018 - Présent</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-icon">🏢</div>
+                        <div class="experience-details">
+                            <h4>Chercheuse en IA</h4>
+                            <p class="company">Institut de Recherche Avancée en IA</p>
+                            <p class="period">2012 - 2018</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="content-section">
+                    <h3>Éducation</h3>
+                    <div class="education-item">
+                        <div class="education-icon">🎓</div>
+                        <div class="education-details">
+                            <h4>Ph.D. en Intelligence Artificielle</h4>
+                            <p class="institution">Université Paris-Saclay</p>
+                            <p class="year">2012</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">🎓</div>
+                        <div class="education-details">
+                            <h4>M.Sc. en Informatique</h4>
+                            <p class="institution">École Normale Supérieure</p>
+                            <p class="year">2009</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing -->
+                <section class="content-section">
+                    <h3>Tarifs & Disponibilité</h3>
+                    <p>Tarifs personnalisés basés sur la portée du projet. Sessions de consultation disponibles à partir de 250€/heure.</p>
+                    <p class="price-highlight">À partir de 250€ / heure</p>
+                </section>
+
+                <!-- Testimonials -->
+                <section class="content-section">
+                    <h3>Témoignages</h3>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"L'expertise du Dr. Dubois a été essentielle pour le succès de notre projet de diagnostic médical basé sur l'IA. Son approche méthodique et sa vision stratégique sont inégalées."</p>
+                        <p class="testimonial-author">- Marie Lefevre, Directrice R&D, BioMed Innovations</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Une professionnelle exceptionnelle qui a su démystifier l'IA pour notre équipe et nous guider vers des solutions concrètes et impactantes."</p>
+                        <p class="testimonial-author">- Jean Dupont, CEO, Financial Solutions</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+{% endblock %}

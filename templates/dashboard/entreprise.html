@@ -1,10 +1,245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css " href="{% static 'css/dashboard_entreprise.css' %}">
+{% endblock %}
+{% block content %}
 
-</body>
-</html>
+ <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Title -->
+            <div class="page-header">
+                <h1>Tableau de Bord Entreprise</h1>
+                <p>Aperçu complet de vos initiatives IA, diagnostics et collaborations avec les experts.</p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="kpi-section">
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <span class="kpi-label">ROI IA Global</span>
+                        <span class="kpi-icon">📈</span>
+                    </div>
+                    <div class="kpi-value">+18.5%</div>
+                    <div class="kpi-description">Augmentation moyenne du ROI cette année</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <span class="kpi-label">Maturité IA Actuelle</span>
+                        <span class="kpi-icon">🎯</span>
+                    </div>
+                    <div class="kpi-value">75%</div>
+                    <div class="kpi-description">Score de maturité diagnostic V3</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <span class="kpi-label">Projets Complétés</span>
+                        <span class="kpi-icon">✅</span>
+                    </div>
+                    <div class="kpi-value">12</div>
+                    <div class="kpi-description">Missions avec experts réalisées</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>Maturité IA Mensuelle</h3>
+                    <p>Évolution du niveau de maturité IA de l'entreprise</p>
+                    <div class="chart">
+                        <svg viewBox="0 0 400 200" class="line-chart">
+                            <polyline points="20,180 60,160 100,140 140,120 180,100 220,80 260,70 300,60 340,50 380,40" stroke="#333" stroke-width="2" fill="none"/>
+                            <circle cx="20" cy="180" r="3" fill="#333"/>
+                            <circle cx="60" cy="160" r="3" fill="#333"/>
+                            <circle cx="100" cy="140" r="3" fill="#333"/>
+                            <circle cx="140" cy="120" r="3" fill="#333"/>
+                            <circle cx="180" cy="100" r="3" fill="#333"/>
+                            <circle cx="220" cy="80" r="3" fill="#333"/>
+                            <circle cx="260" cy="70" r="3" fill="#333"/>
+                            <circle cx="300" cy="60" r="3" fill="#333"/>
+                            <circle cx="340" cy="50" r="3" fill="#333"/>
+                            <circle cx="380" cy="40" r="3" fill="#333"/>
+                        </svg>
+                        <div class="chart-labels">
+                            <span>Jan</span>
+                            <span>Fév</span>
+                            <span>Mar</span>
+                            <span>Avr</span>
+                            <span>Mai</span>
+                            <span>Jun</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Impact & ROI des Projets IA</h3>
+                    <p>Retour sur investissement et impact opérationnel</p>
+                    <div class="chart">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">30k€</span>
+                            </div>
+                            <div class="bar" style="height: 80%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">40k€</span>
+                            </div>
+                            <div class="bar" style="height: 70%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">35k€</span>
+                            </div>
+                            <div class="bar" style="height: 90%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">45k€</span>
+                            </div>
+                            <div class="bar" style="height: 65%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">32k€</span>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-labels">
+                            <span>ROI Moyen</span>
+                            <span>Impact Opérationnel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tables Section -->
+            <div class="tables-section">
+                <div class="table-container">
+                    <h3>Suivi des Recommandations IA</h3>
+                    <p>Progression des recommandations mises en œuvre par les experts</p>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Recommandation</th>
+                                    <th>Expert Responsable</th>
+                                    <th>Statut</th>
+                                    <th>Progression</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Implémenter une solution NLP pour le support client</td>
+                                    <td>Dr. Léo Dubois</td>
+                                    <td><span class="status-badge status-progress">En Cours</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 50%"></div>
+                                            <span class="progress-text">50%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Optimiser la chaîne d'approvisionnement avec l'IA prédictive</td>
+                                    <td>Prof. Sarah Chen</td>
+                                    <td><span class="status-badge status-complete">Complété</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 100%"></div>
+                                            <span class="progress-text">100%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Développer un système de vision par ordinateur</td>
+                                    <td>Mme. Clara Moreau</td>
+                                    <td><span class="status-badge status-pending">En Attente</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 15%"></div>
+                                            <span class="progress-text">15%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mettre en place un chatbot RH</td>
+                                    <td>Dr. Léo Dubois</td>
+                                    <td><span class="status-badge status-progress">En Cours</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 25%"></div>
+                                            <span class="progress-text">25%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <h3>Historique des Missions d'Experts</h3>
+                    <p>Consultez les projets et consultations passés avec nos experts IA</p>
+                    <div class="expert-history">
+                        <div class="expert-item">
+                            <div class="expert-avatar">👨‍💼</div>
+                            <div class="expert-details">
+                                <h4>Consultation stratégique en IA</h4>
+                                <p class="expert-name">Expert : Dr. Léo Dubois</p>
+                                <p class="expert-description">Évaluation des besoins en IA et feuille de route pour les 12 prochains mois.</p>
+                            </div>
+                            <div class="expert-date">15 Mars 2024</div>
+                        </div>
+
+                        <div class="expert-item">
+                            <div class="expert-avatar">👩‍🔬</div>
+                            <div class="expert-details">
+                                <h4>Atelier sur l'IA Éthique</h4>
+                                <p class="expert-name">Expert : Prof. Sarah Chen</p>
+                                <p class="expert-description">Formation de l'équipe sur les principes de l'IA éthique et la conformité réglementaire.</p>
+                            </div>
+                            <div class="expert-date">10 Fév 2024</div>
+                        </div>
+
+                        <div class="expert-item">
+                            <div class="expert-avatar">👩‍💻</div>
+                            <div class="expert-details">
+                                <h4>Développement d'un POC IA</h4>
+                                <p class="expert-name">Expert : Mme. Clara Moreau</p>
+                                <p class="expert-description">Preuve de concept pour une application de reconnaissance d'images industrielles.</p>
+                            </div>
+                            <div class="expert-date">20 Jan 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Section -->
+            <div class="alerts-section">
+                <h3>Alertes & Tendances IA</h3>
+                <p>Restez informé des dernières évolutions et risques liés à l'IA</p>
+                <div class="alerts-container">
+                    <div class="alert-item">
+                        <div class="alert-icon">⚠️</div>
+                        <div class="alert-content">
+                            <h4>Nouvelle Régulation RGPD pour l'IA</h4>
+                            <p>Impact sur la collecte et le traitement des données sensibles par l'IA.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="alert-icon">💡</div>
+                        <div class="alert-content">
+                            <h4>Tendances : IA Générative et Automatisation</h4>
+                            <p>Découvrez les opportunités pour automatiser les tâches créatives et de routine.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="alert-icon">🛡️</div>
+                        <div class="alert-content">
+                            <h4>Risque de Biais Algorithmique</h4>
+                            <p>Audit de vos modèles IA pour détecter et corriger les biais potentiels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

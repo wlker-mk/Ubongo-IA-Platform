@@ -8,9 +8,8 @@ header {
   position: relative;
 
   /* Image de fond */
- background: url("../images/un-paysage-naturel-magnifique.jpg") no-repeat center center;
+  background: url("../images/un-paysage-naturel-magnifique.jpg") no-repeat center center;
   background-size: cover;
-
   height: 80px; /* hauteur minimale */
 }
 
@@ -110,13 +109,7 @@ header nav a {
 /* Hover : couleur et taille légèrement plus grande */
 header nav a:hover {
   color: rgb(243, 220, 17);
-  font-size: 10px;
-}
-
-/* Page actuelle : soulignement avec couleur spécifique */
-header nav a.active {
-  text-decoration: underline;  /* seul le lien actif est souligné */
-  color: rgb(136, 150, 9);
+  font-size: 10px
 }
 
 /* Pseudo-element pour animation (optionnel si tu veux un effet trait animé) */

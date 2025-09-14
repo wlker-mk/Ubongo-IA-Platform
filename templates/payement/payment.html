@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css " href="{% static 'css/payement.css' %}">
+{% endblock %}
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Finalisez Votre Achat</h1>
+                    <p>Choisissez votre méthode de paiement préférée et accédez instantanément à votre nouveau cours sur AfriLearn.</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="card-visual">10</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="payment-layout">
+                <!-- Payment Form -->
+                <div class="payment-form">
+                    <!-- Course Summary -->
+                    <div class="course-summary">
+                        <h2>Développement Web Complet: De Zéro à Héros</h2>
+                        <p>Maîtrisez le développement web front-end et back-end avec les dernières technologies.</p>
+                        <div class="price-display">
+                            <span class="price">349,99 €</span>
+                            <span class="price-label">Prix Total</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Selection -->
+                    <div class="payment-methods">
+                        <h3>Sélectionnez le mode de paiement</h3>
+                        <div class="payment-options">
+                            <label class="payment-option active">
+                                <input type="radio" name="payment-method" value="stripe" checked>
+                                <div class="option-content">
+                                    <span class="option-icon">💳</span>
+                                    <span class="option-text">Carte de Crédit (Stripe)</span>
+                                </div>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="paypal">
+                                <div class="option-content">
+                                    <span class="option-icon">💰</span>
+                                    <span class="option-text">PayPal</span>
+                                </div>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="mpesa">
+                                <div class="option-content">
+                                    <span class="option-icon">📱</span>
+                                    <span class="option-text">M-Pesa</span>
+                                </div>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="orange">
+                                <div class="option-content">
+                                    <span class="option-icon">📶</span>
+                                    <span class="option-text">Orange Money</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card Details Form -->
+                    <div class="card-form" id="card-form">
+                        <h3>Détails de la carte</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="card-number">Numéro de Carte</label>
+                                <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Date d'Expiration</label>
+                                    <input type="text" id="expiry" placeholder="MM/AA" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvc">CVC</label>
+                                    <input type="text" id="cvc" placeholder="XXX" maxlength="3">
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Confirmer le Paiement et Accéder au Cours</button>
+                                <button type="button" class="btn-secondary">Annuler le Paiement</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="info-box">
+                        <h3>Pourquoi acheter avec AfriLearn ?</h3>
+
+                        <div class="info-item">
+                            <h4>Paiement Sécurisé:</h4>
+                            <p>Vos informations sont protégées par les dernières technologies de cryptage.</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Accès Instantané:</h4>
+                            <p>Commencez votre cours immédiatement après la confirmation du paiement.</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Support Dédié: </h4>
+                            <p>Notre équipe est disponible pour vous aider à chaque étape.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+<script src="{% static 'js/payment.js' %}"></script>

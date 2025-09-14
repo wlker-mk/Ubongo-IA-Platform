@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block extra_css %}
 <link rel="stylesheet" type="text/css " href="{% static 'css/styles.css' %}">
+{% endblock %}
 {% block content %}
- <!-- HERO -->
+<!-- HERO -->
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -11,45 +13,109 @@
             <a href=" {% url 'diagnostic' %}" class="btn-primary">Commencer le Diagnostic</a>
         </div>
     </section>
-
- <!-- SECTORS -->
+<!-- SECTORS -->
     <section class="sectors">
         <h2>Cas d'usage sectoriels</h2>
         <div class="cards">
-            <div class="card">❤ Santé<br><small>Optimisation des diagnostics médicaux…</small></div>
-            <div class="card">💰 Finance<br><small>Détection de fraudes, trading…</small></div>
-            <div class="card">🏭 Industrie<br><small>Maintenance prédictive, automatisation…</small></div>
-            <div class="card">📚 Éducation<br><small>Parcours personnalisés…</small></div>
+            <div class="card">❤ Santé<br><small>Optimisation des diagnostics médicaux et personnalisation des traitements grâce à l'IA</small> <br> <br><br>
+                <p>La plateforme d’IA améliore les diagnostics et personnalise les traitements en analysant rapidement et avec précision les données médicales.
+                    Elle réduit les erreurs, accélère les décisions et renforce la qualité des soins
+                </p>
+            </div>
+            <div class="card">💰 Finance<br><small>Détection de fraudes, trading algorithmique et analyse prédictive des marchés financiers</small> <br> <br><br>
+                <p>L’IA détecte les fraudes, automatise le trading et anticipe les tendances grâce à l’analyse massive de données en temps réel.
+                    Elle améliore la rentabilité, optimise la gestion des risques et offre un avantage compétitif aux acteurs financiers.
+                </p>
+            </div>
+            <div class="card">🏭 Industrie<br><small>Maintenance prédictive, automatisation des chaînes de production et contrôle qualité.</small> <br> <br><br>
+                <p>L’IA optimise l’industrie grâce à la maintenance prédictive, l’automatisation des chaînes de production et le contrôle qualité intelligent.
+                    Elle anticipe les pannes, réduit les coûts, limite les erreurs et garantit une production fiable et performante.
+                </p>
+            </div>
+            <div class="card">📚 Éducation<br><small>Parcours d'apprentissage personnalisés et évaluation adaptative des performances</small> <br> <br><br>
+                <p>L’IA personnalise les parcours d’apprentissage grâce à l’analyse en temps réel, des évaluations adaptatives et des recommandations ciblées.
+                    Elle optimise la progression des apprenants, valorise les talents internes et renforce la rétention des compétences clés
+                </p>
+            </div>
         </div>
     </section>
- <!-- TESTIMONIALS -->
+<!-- TESTIMONIALS -->
     <section class="testimonials">
         <h2>Ce que nos clients disent</h2>
-        <div class="cards">
-            <blockquote>“IAcademy a transformé notre approche…”<br><cite>- Sophie Dubois</cite></blockquote>
-            <blockquote>“Les experts sont exceptionnels…”<br><cite>- Marc Lefevre</cite></blockquote>
-            <blockquote>“Une plateforme complète…”<br><cite>- Chloé Martin</cite></blockquote>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                    <p class="testimonial-text">
+                    "IAcademy a transformé notre approche de l'IA. Le diagnostic a été précis et les formations très pertinentes pour nos équipes."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/sophie_dubois.jpeg' %}" alt="Sophie Dubois">
+                        <div>
+                            <h4>Sophie Dubois</h4>
+                            <p>Directrice de l'Innovation, TechCorp</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="testimonial-card">
+                    <p class="testimonial-text">
+                    "Les experts sont exceptionnels. Leurs conseils ont été cruciaux pour le déploiement de notre projet IA dans les délais et le budget."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/marc_lefevre.jpg' %}" alt="Marc Lefevre">
+                        <div>
+                            <h4>Marc Lefevre</h4>
+                            <p>CTO, Global Solutions</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Une plateforme complète pour se former et se tenir informé des dernières avancées. Indispensable pour tout professionnel de l'IA."
+                </p>
+                <div class="testimonial-author">
+                    <img src="{% static 'images/chloe_martin.jpg' %}" alt="Chloé Martin">
+                    <div>
+                        <h4>Chloé Martin</h4>
+                        <p>Data Scientist, DataForge</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
- <!-- NEWS -->
+<!-- NEWS -->
     <section class="news">
         <h2>Actualités IA</h2>
         <div class="cards">
             <div class="news-item">
-                <img src="{% static 'images/image1.jpg' %}" alt="IA Générative">
-                <h3>L’IA Générative Révolutionne la Création de Contenu</h3>
-                <p>Lire plus</p>
+                <img src="{% static 'images/creation_contenue.jpg' %}" alt="IA Générative">
+                <div class="news-content">
+                    <h3>L’IA Générative Révolutionne la Création de Contenu</h3>
+                    <p>Découvrez comment les modèles d'IA générative transforment l'industrie créative, de la rédaction à l'art visuel.</p>
+                    <span class="date">10 Mars 2024</span>
+                    <a href="#">Lire plus</a>
+                </div>
             </div>
+
             <div class="news-item">
-                <img src="{% static 'images/heureuse-femme-d-affaires-avec-bulle-de-dialogue.jpg' %}" alt="IA Éthique">
-                <h3>Les Dernières Avancées en IA Éthique</h3>
-                <p>Lire plus</p>
+                <img src="{% static 'images/impact_emploi.jpeg' %}" alt="IA et emploi">
+                <div class="news-content">
+                    <h3>Impact de l’IA sur l’Emploi : Tendances et Perspectives</h3>
+                    <p>Analyse des effets de l'IA sur le marché du travail et les compétences nécessaires pour l'avenir.</p>
+                    <span class="date">28 Février 2024</span>
+                    <a href="#">Lire plus</a>
+                </div>
             </div>
+
             <div class="news-item">
-                <img src="{% static 'images/equipe-commerciale-multiethnique-discutant-du-projet.jpg' %}" alt="IA et emploi">
-                <h3>Impact de l’IA sur l’Emploi</h3>
-                <p>Lire plus</p>
+                <img src="{% static 'images/IA_eth.jpg' %}" alt="IA Éthique">
+                <div class="news-content">
+                    <h3>Les Dernières Avancées en IA Éthique</h3>
+                    <p>Un tour d'horizon des innovations visant à rendre l'intelligence artificielle plus juste et transparente pour tous.</p>
+                    <span class="date">05 Mars 2024</span>
+                    <a href="#">Lire plus</a>
+                </div>
             </div>
         </div>
     </section>
@@ -88,7 +154,6 @@
             </div>
 
         </div>
-        <a href="expert.html" class="btn-primary">Tous nos experts</a>
+        <a href="#" class="btn-primary">Tous nos experts</a>
     </section>
-
 {% endblock %}
